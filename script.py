@@ -2,7 +2,10 @@ def Caffy():
   print("I'm Caffy, the coffee bot. I exist to make sure no human goes uncaffeinated. \n")
   size = get_size()  
   drink_type = get_drink_type()
-  print('Alright, that\'s a {} {}'.format(size, drink_type))
+
+  print("Alright, that\'s a {} {}".format(size, drink_type))
+  name = get_name()
+  print("OK hum-- I mean, {}".format(name) + ", your drink will be ready soon")
 
 
 def get_size():
@@ -28,5 +31,8 @@ def get_drink_type():
   else:
     print("Pick one of our drinks or leave the establishment! \n... \n...")
     return get_drink_type()
+def get_name():
+  response = input("What's your name, human? \n ")
+  return response
 
 Caffy()
